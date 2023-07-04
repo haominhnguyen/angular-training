@@ -1,0 +1,12 @@
+<mat-toolbar color="primary">
+  <span><mat-icon>work_outline</mat-icon> EnrichSkillsAngular </span>
+
+  <div class="spacer"></div>
+
+  <a mat-button routerLink="/admin/home" routerLinkActive="is-active">Home</a>
+  <a mat-button routerLink="/admin/users" routerLinkActive="is-active">Users</a>
+  <a mat-button routerLink="/admin/profile" routerLinkActive="is-active">Profile</a>
+  <a mat-button (click)="developingNotification()" routerLinkActive="is-active">Create User</a>
+  <a mat-button color="warn" *ngIf="!checkNotLoginUser"><mat-icon>account_circle</mat-icon> {{userLogin}} </a>
+  <a mat-raised-button color="accent" (click) = "logout()">Logout</a>
+</mat-toolbar>

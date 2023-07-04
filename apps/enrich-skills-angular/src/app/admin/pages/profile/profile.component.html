@@ -1,0 +1,33 @@
+<mat-tab-group mat-align-tabs="start">
+  <mat-tab label="PROFILE">
+    <div class="container">
+      <div class="profile">
+        <mat-list>
+          <div class = "img-content">
+            <img [src]="'http://localhost:3333/'+dataOutput?.avatar" />
+          </div>
+          <div class="content">
+            <div class = "title">
+              <span> ID: </span>
+              <span> Username: </span>
+              <span> Role: </span>
+              <span> Default page: </span>
+              <span> Current profile status: </span>
+            </div>
+            <div class = "content-view">
+              <mat-list-item> {{dataOutput?.id}} </mat-list-item>
+              <mat-list-item> {{dataOutput?.username}} </mat-list-item>
+              <mat-list-item> {{dataOutput?.role}} </mat-list-item>
+              <mat-list-item> {{dataOutput?.defaultPage}} </mat-list-item>
+              <mat-list-item> {{dataOutput?.isActivated}} </mat-list-item>
+          </div>
+        </div>
+        </mat-list>
+    </div>
+    </div>
+  </mat-tab>
+  <mat-tab label="MORE INFORMATION">
+    <mat-spinner></mat-spinner>
+    <h2> Develop in the feature... </h2>
+  </mat-tab>
+</mat-tab-group>
